@@ -9,7 +9,7 @@ A web application for booking and managing movie tickets, built with PHP, HTML, 
 
 ## Installation
 1. Clone the repo and navigate to the directory.
-2. Import `database/movie_db.sql` into MySQL.
+2. Import `database/movie_db.sql` into pgSQL.
 3. Update database credentials in `config.php`.
 
 ## Usage
