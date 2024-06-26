@@ -1,0 +1,91 @@
+ Create table Theatre( 
+T_id int primary key,
+Location Varchar(50),
+TName Varchar(500) UNIQUE,
+Capacity int 
+
+);
+ Create table Movie( 
+M_id int primary key,
+Title Varchar(150),
+Genre Varchar(500),
+ReleaseDate Date 
+
+);
+Create table Show( 
+S_id int primary key,
+Time varchar(50) UNIQUE,
+capacity int
+);
+insert into Show(S_id,Time,capacity) values(12,'12:00PM-03:00PM',150);
+insert into Show(S_id,Time,capacity) values(11,'09:00AM-12:00PM',150);
+insert into Show(S_id,Time,capacity) values(13,'03:00PM-06:00PM',150);
+insert into Show(S_id,Time,capacity) values(14,'06:00PM-09:00PM',150);
+insert into Show(S_id,Time,capacity) values(15,'09:00PM-12:00AM',150);
+
+
+
+CREATE TABLE Movie_Show (
+    MS_id Serial PRIMARY KEY,
+    M_id INT,
+    S_id INT,
+	Seats int,
+	Price Numeric(10,2),
+	ScreenNo int,
+    FOREIGN KEY (M_id) REFERENCES Movie(M_id),
+    FOREIGN KEY (S_id) REFERENCES Show(S_id)
+);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(401,1,11,150,120,201);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(402,2,12,150,150,201);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(403,3,13,150,120,201);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(404,4,14,150,150,201);
+
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(405,5,15,150,120,201);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(406,2,12,150,150,201);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(407,2,13,150,150,201);
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo) values(408,2,14,150,150,201);
+
+
+
+
+
+
+
+
+CREATE TABLE Booking (
+    B_id Serial PRIMARY KEY,
+    Date Date,
+	Seats int,
+	ScreenNo int,
+	Price Numeric(10,2),
+	TName Varchar(500),
+	c_id varchar(50),
+	MS_id int,
+    FOREIGN KEY (MS_id) REFERENCES movie_show(ms_id),
+	FOREIGN KEY (Price) REFERENCES movie_show(Price),
+    FOREIGN KEY (c_id) REFERENCES Customer(c_id),
+	FOREIGN KEY (TName) REFERENCES Theatre(TName)
+);
+
+
+insert into Theatre(T_id,Location,TName,Capacity) values(901,'Phaltan','Housefull Cinemas',300);
+
+insert into Movie(M_id,Title,Genre,ReleaseDate) values(1,'Salaar','Action','2023-12-22');
+insert into Movie(M_id,Title,Genre,ReleaseDate) values(2,'Animal','Action','2023-12-01');
+insert into Movie(M_id,Title,Genre,ReleaseDate) values(3,'Merry chrismas','Suspence','2024-01-12');
+insert into Movie(M_id,Title,Genre,ReleaseDate) values(4,'Hanuman','Action','2024-01-12');
+insert into Movie(M_id,Title,Genre,ReleaseDate) values(5,'Captain Miller','Action','2024-01-12');
+
+
+
+insert into Show(S_id,Time,Seats,ScreenNo) values(12,'12:00PM-03:00PM',140,201);
+
+
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo,Time) values(401,1,11,150,120,201,'9:00AM-12:00PM');
+insert into Movie_Show(MS_id,M_id,S_id,Seats,Price,ScreenNo,Time) values(401,1,11,150,120,201,'9:00AM-12:00PM');
+
+
+
+
+INSERT INTO Booking (Date, Seats, ScreenNo, Price, TName, c_id, MS_id) VALUES
+(DATE '2024-01-15', 2, 1, 10.00, 'City Theater', 'customer123', 3),

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url('images.jpg');
+
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #logo {
+            margin-right: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        #logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            margin: 0;
+            margin-left: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            margin-left: auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            animation: fadeIn 1s ease-out;
+            font-size: 40px;
+        }
+
+        nav a:hover {
+            background-color: #27ae60;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <h1>Welcome to Your Website</h1>
+    
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+    <!-- Your content goes here -->
+
+</body>
+</html>

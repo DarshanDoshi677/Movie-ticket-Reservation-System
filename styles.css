@@ -1,0 +1,236 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white; /* Background color */
+    margin: 0;
+    padding: 0;
+    background-image: url('background3.jpg');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 800px; /* Made it wider */
+   /* Form background color */
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-image: url('background2.jpg');
+    font-size: 25px;
+    color: rgb(34,34,34);
+    
+
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+input, select {
+    width: calc(100% - 16px);
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+input#text{
+    font-size: 20px;
+    margin-right: 500px;
+}
+
+button {
+    background-color: #3498db; /* Button background color */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: #2980b9; /* Button hover color */
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group label {
+    width: 48%;
+    color: rgb(34,34,34);
+    font-family: 'Times New Roman', Times, serif;
+/* Adjusted label width for better alignment */
+}
+
+.form-group select {
+    width: 80%; 
+    margin-right: 100px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;/* Adjusted select width for better alignment */
+}
+input[type=text]{
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+header {
+    background-color: #3498db;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Add styles for icons */
+.icon {
+    margin-right: 5px;
+}
+
+/* Add styles for loading spinner */
+
+header {
+    background-image: url('images.jpg');
+
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#logo {
+    margin-right: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    margin: 0;
+    margin-left: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    margin-left: auto;
+    animation: fadeInUp 1s ease-out;
+}
+.movie-img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+margin-top: 10px;
+}
+.movie img:hover {
+transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    animation: fadeIn 1s ease-out;
+    font-size: 40px;
+}
+
+nav a:hover {
+    background-color: #27ae60;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seats {
+width: 200px;
+padding: 30px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+border-radius: 15px;
+background-color: #FD61AF;
+font-size: 25px;
+color: rgb(34, 34, 34);
+margin-left: 50px; /* Adjust the margin based on your design */
+margin-bottom: 20px; /* Adjust the margin based on your design */
+float: left; /* Float the seats container to the right */
+}
+
+
+
+/* Add more styles as needed */
+
+/* Add simple animations for a smoother user experience */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+payment-form {
+    display: none;
+}

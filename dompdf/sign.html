@@ -1,0 +1,118 @@
+
+
+<?php
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      background: url("signin.jpg");
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed font */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .signup-form {
+      background: url("background2.jpg");
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      width: 100%;
+      border: 2px solid #ddd; /* Lighter border color */
+      font-size: medium;
+    }
+
+    h2 {
+    
+      font-size: 80px;
+      color: gold;
+      background-color: rgba(255,0,0,0.5); /* Semi-transparent background color */
+      padding: 10px; /* Add padding for better appearance */
+      border-radius: 4px; /* Rounded corners */
+      margin-bottom: 1px; /* Increase margin for spacing */
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="password"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed font */
+      font-size: 30px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: larger;
+      transition: background-color 0.3s ease;
+      font-family: 'Times New Roman', Times, serif; /* Changed font */
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-form">
+    <h2>Sign Up</h2>
+    <form action="sign.php" method="post">
+      <div class="form-group">
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" name="customerId" required>
+      </div>
+      <div class="form-group">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mobileNo">Mobile No:</label>
+        <input type="tel" id="mobileNo" name="Contact" pattern="[0-9]{10}" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
